@@ -30,7 +30,9 @@ export class PieComponent implements AfterViewInit {
 
         var timer = setTimeout(() => {
             var myChart = ECharts.init(document.getElementById('main'));
-            myChart.setOption(option)
+            myChart.setOption(option,{
+                renderer:'svg'
+            })
             window.clearTimeout(timer);
         }, 30);
 

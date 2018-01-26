@@ -33,7 +33,9 @@ export class ScatterComponent implements AfterViewInit, OnInit {
         //会多次触发
         var timer = setTimeout(() => {
             console.info("0.5s")
-            var myChart = ECharts.init(document.getElementById('main'));
+            var myChart = ECharts.init(document.getElementById('main'),{
+                renderer:'svg'
+            });
             myChart.setOption(option);
             window.clearTimeout(timer);
         }, 30);
