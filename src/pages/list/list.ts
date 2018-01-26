@@ -3,7 +3,31 @@ import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-list',
-  templateUrl: 'list.html'
+  template: `
+    <ion-header>
+      <ion-navbar>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>List</ion-title>
+      </ion-navbar>
+    </ion-header>
+    
+    <ion-content>
+      <ion-list>
+        <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+          <ion-icon [name]="item.icon" item-start></ion-icon>
+          {{item.title}}
+          <div class="item-note" item-end>
+            {{item.note}}
+          </div>
+        </button>
+      </ion-list>
+      <div *ngIf="selectedItem" padding>
+        You navigated here from <b>{{selectedItem.title}}</b>
+      </div>
+    </ion-content>
+  `
 })
 export class ListPage {
   selectedItem: any;

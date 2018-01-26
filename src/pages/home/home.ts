@@ -1,14 +1,24 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  template:`
+
+  <ion-header>
+  <ion-navbar>
+  <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+<devlog></devlog>
+    </ion-content>
+  `,
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
-
-  }
 
 }
