@@ -1,5 +1,9 @@
 import { Component, AfterViewInit } from '@angular/core'
+import { IonicPage } from 'ionic-angular';
+
 import * as ECharts from 'echarts';
+
+@IonicPage()
 
 @Component({
     template: `
@@ -30,11 +34,11 @@ export class PieComponent implements AfterViewInit {
 
         var timer = setTimeout(() => {
             var myChart = ECharts.init(document.getElementById('main'));
-            myChart.setOption(option,{
+            myChart.setOption(option,null,{
                 renderer:'svg'
             })
             window.clearTimeout(timer);
-        }, 30);
+        }, 100);
 
 
         // console.info('beforeDispose:', ECharts.getInstanceByDom(document.getElementById('main')));
@@ -84,14 +88,14 @@ const option = {
             label: {
                 normal: {
                     textStyle: {
-                        color: 'rgba(255, 255, 255, 0.3)'
+                        color: 'rgba(0, 0, 0, 0.3)'
                     }
                 }
             },
             labelLine: {
                 normal: {
                     lineStyle: {
-                        color: 'rgba(255, 255, 255, 0.3)'
+                        color: 'rgba(0, 0, 0, 0.3)'
                     },
                     smooth: 0.2,
                     length: 10,
@@ -101,8 +105,8 @@ const option = {
             itemStyle: {
                 normal: {
                     color: '#c23531',
-                    shadowBlur: 100,
-                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    shadowBlur: 10,
+                    shadowColor: 'rgba(0, 0, 0, 0.3)'
                 }
             },
             animationType: 'scale',
@@ -113,3 +117,4 @@ const option = {
         }
     ]
 };
+console.info('pie page')

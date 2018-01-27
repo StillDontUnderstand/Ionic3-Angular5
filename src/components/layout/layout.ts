@@ -1,14 +1,13 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav ,NavController } from 'ionic-angular';
+import { Nav ,NavController,IonicPage } from 'ionic-angular';
 
-import { HomePage } from '../../pages/home/home';
-import { ListPage } from '../../pages/list/list';
 import { UserComponent } from '../../components/user/user.component';
-import { PieComponent } from '../../components/gallery/pie.component'
-import { ScatterComponent } from '../../components/scatter/scatter.component'
+// import { PieComponent } from '../../components/pie/pie.component'
+// import { ScatterComponent } from '../../components/scatter/scatter.component'
 
 import * as ECharts from 'echarts';
 
+@IonicPage()
 @Component({
     template: `
         <ion-menu [content]="content">
@@ -34,15 +33,15 @@ import * as ECharts from 'echarts';
 export class LayoutComponent {
     @ViewChild(Nav) nav: NavController;
 
-    rootPage: any = HomePage;
+    rootPage: any = 'HomePage';
 
     // used for an example of ngFor and navigation
     pages: Array<{ title: string, component: any }> = [
-        { title: 'Home', component: HomePage },
-        { title: 'List', component: ListPage },
+        { title: 'Home', component: 'HomePage' },
+        { title: 'List', component: 'ListPage' },
         { title: 'User', component: UserComponent },
-        { title: 'Pie', component: PieComponent },
-        { title: 'Scatter', component: ScatterComponent },
+        { title: 'Pie', component: 'PieComponent' },
+        { title: 'Scatter', component: 'ScatterComponent' },
     ];
     openPage(page) {
         //判断是否需要跳转
@@ -61,4 +60,4 @@ export class LayoutComponent {
         }
     }
 }
-
+console.info('layout page')

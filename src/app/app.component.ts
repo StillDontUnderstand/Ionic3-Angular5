@@ -3,7 +3,6 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { SlidesPage } from '../pages/slides/slides';
 
 @Component({
   template: `
@@ -12,7 +11,7 @@ import { SlidesPage } from '../pages/slides/slides';
 })
 export class MyApp {
 
-  rootPage: any = SlidesPage;
+  rootPage: any = 'SlidesPage';
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();

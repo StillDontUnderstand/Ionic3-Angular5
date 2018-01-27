@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 
+import { IonicPage } from 'ionic-angular';
 
+@IonicPage()
 @Component({
   template:`
 
@@ -22,3 +24,4 @@ export class HomePage {
 
 
 }
+console.info('home page')

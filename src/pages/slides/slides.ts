@@ -1,8 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams,IonicPage } from 'ionic-angular';
 import { Slides } from 'ionic-angular';
-
-import { LayoutComponent } from '../../components/layout/layout.component';
 
 /**
  * Generated class for the SlidesPage page.
@@ -10,11 +8,12 @@ import { LayoutComponent } from '../../components/layout/layout.component';
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-
+@IonicPage()
 @Component({
   selector: 'page-slides',
   templateUrl: 'slides.html',
 })
+
 export class SlidesPage {
   @ViewChild(Slides) slides: Slides;
 
@@ -25,10 +24,11 @@ export class SlidesPage {
   }
   openDemo() {
     console.info("openDemo");
-    this.navCtrl.push(LayoutComponent);
+    this.navCtrl.push('LayoutComponent');
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad SlidesPage');
   }
 
 }
+console.info('slides page')

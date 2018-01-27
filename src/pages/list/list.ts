@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { IonicPage } from 'ionic-angular';
 
+@IonicPage()
 @Component({
   selector: 'page-list',
   template: `
@@ -59,3 +61,4 @@ export class ListPage {
     });
   }
 }
+console.info('list page')
