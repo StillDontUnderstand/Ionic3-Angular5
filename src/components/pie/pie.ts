@@ -38,7 +38,7 @@ export class PieComponent implements AfterViewInit {
                 renderer:'svg'
             })
             window.clearTimeout(timer);
-        }, 100);
+        }, 50);
 
 
         // console.info('beforeDispose:', ECharts.getInstanceByDom(document.getElementById('main')));

@@ -16,4 +16,4 @@ import { LayoutComponent } from './layout'
         LayoutComponent
     ]
 })
-export class HomeTabsPageModule { }
+export class LayoutModule { }

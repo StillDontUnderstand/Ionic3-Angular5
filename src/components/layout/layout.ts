@@ -2,8 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav ,NavController,IonicPage } from 'ionic-angular';
 
 import { UserComponent } from '../../components/user/user.component';
-// import { PieComponent } from '../../components/pie/pie.component'
-// import { ScatterComponent } from '../../components/scatter/scatter.component'
+
 
 import * as ECharts from 'echarts';
 
@@ -33,15 +32,16 @@ import * as ECharts from 'echarts';
 export class LayoutComponent {
     @ViewChild(Nav) nav: NavController;
 
-    rootPage: any = 'HomePage';
+    rootPage: any = 'DevlogPage';
 
     // used for an example of ngFor and navigation
     pages: Array<{ title: string, component: any }> = [
-        { title: 'Home', component: 'HomePage' },
+        { title: 'Devlog', component: 'DevlogPage' },
         { title: 'List', component: 'ListPage' },
         { title: 'User', component: UserComponent },
         { title: 'Pie', component: 'PieComponent' },
         { title: 'Scatter', component: 'ScatterComponent' },
+        { title: 'Gallery', component: 'GalleryPage' },
     ];
     openPage(page) {
         //判断是否需要跳转

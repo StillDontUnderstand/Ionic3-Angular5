@@ -1,22 +1,20 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { HomePage } from './home'
-import {DevlogComponent} from './devlog.component'
+
+import { DevlogPage } from './devlog'
 
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 
 @NgModule({
     declarations: [
-        HomePage,
-        DevlogComponent,
+        DevlogPage,
     ],
     imports: [
-        IonicPageModule.forChild(HomePage),
+        IonicPageModule.forChild(DevlogPage),
         NgZorroAntdModule.forRoot(),
-
     ],
     exports: [
-        HomePage
+        DevlogPage
     ]
 })
-export class HomeTabsPageModule { }
+export class DevlogPageModule { }

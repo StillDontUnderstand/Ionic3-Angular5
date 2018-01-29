@@ -17,4 +17,4 @@ import { NgZorroAntdModule } from 'ng-zorro-antd';
         ListPage
     ]
 })
-export class HomeTabsPageModule { }
+export class ListPageModule { }

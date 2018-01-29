@@ -13,4 +13,4 @@ import { SlidesPage } from './slides'
         SlidesPage
     ]
 })
-export class HomeTabsPageModule { }
+export class SlidesPageModule { }

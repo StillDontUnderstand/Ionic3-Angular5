@@ -17,4 +17,4 @@ import { NgZorroAntdModule } from 'ng-zorro-antd';
         PieComponent
     ]
 })
-export class HomeTabsPageModule { }
+export class PieModule { }

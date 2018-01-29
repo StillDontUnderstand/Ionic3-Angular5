@@ -16,4 +16,4 @@ import { NgZorroAntdModule } from 'ng-zorro-antd';
         ScatterComponent
     ]
 })
-export class HomeTabsPageModule { }
+export class ScatterModule { }
